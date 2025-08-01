@@ -1,28 +1,12 @@
 import { useState } from 'react';
 
-function someFunc() {
-  const mySet = new Set(['Mirko', 'Marko', 'Lazar']);
-  for (const setItem of mySet) {
-    console.log(setItem.toUpperCase());
-  }
-}
-
 
 export default function Home() {
-
-  try {
-    someFunc();
-  } catch (err) {
-    console.log("ERROR: " + err.message);
-  }
-
-
+  
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,7 +27,7 @@ export default function Home() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Nešto ne radi kako treba.');
+        throw new Error(data.message || "Something's not working... :(");
       }
 
       setWeather(data);

@@ -2,7 +2,7 @@ export default async function handler(req, res) {
     try {
         const { city } = req.body;
         if (!city) {
-            return res.status(400).json({ message: 'Polje "Grad" je obavezno.' });
+            return res.status(400).json({ message: 'City field is mandatory' });
         }
 
         const apiKey = process.env.OPENWEATHER_API_KEY;
