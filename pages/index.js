@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import Head from 'next/head';
 
 
 export default function Home() {
-  
+
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
@@ -40,6 +41,12 @@ export default function Home() {
 
   return (
     <div style={styles.container}>
+
+      <Head>
+        <title>My Awesome Weather App</title>
+        <meta name="description" content="This is a cool Next.js project!" />
+      </Head>
+
       <h1 style={styles.title}>🌤️ Simple Weather App</h1>
 
       {/* Weather search form */}
@@ -60,7 +67,6 @@ export default function Home() {
 
       {/* Show error message */}
       {error && <p style={styles.error}>{error}</p>}
-
       {/* Show weather result */}
       {weather && (
         <div style={styles.result}>
