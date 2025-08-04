@@ -17,7 +17,8 @@ export default async function handler(req, res) {
         res.status(200).json({
             city: data.name,
             temperature: data.main.temp,
-            description: data.weather[0].description
+            description: data.weather[0].description,
+            wind: data.wind
         });
     } catch (error) {
         res.status(500).json({ message: 'Server error', error: error.toString() });

@@ -72,7 +72,7 @@ export default function Home() {
         <div style={styles.result}>
           <h2>{weather.city}</h2>
           <p>Temperature: {weather.temperature}°C</p>
-          <p>Description: {weather.description}</p>
+          <p>Wind: {weather.wind.speed} km/h</p>
         </div>
       )}
     </div>
