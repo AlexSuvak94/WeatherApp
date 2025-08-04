@@ -6,6 +6,7 @@ export default async function handler(req, res) {
         }
 
         const apiKey = process.env.OPENWEATHER_API_KEY;
+        console.log(apiKey);
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
         const response = await fetch(apiUrl);
