@@ -1,4 +1,4 @@
-Live App On: https://weather-app-five-lemon-49.vercel.app/
+Live App On: https://weather-app-alex-neon.vercel.app/
 
 ## Getting Started
 
