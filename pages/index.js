@@ -44,7 +44,7 @@ export default function Home() {
 
       <Head>
         <title>🌤️ Awesome Weather App</title>
-        <meta name="description" content="This is a cool Next.js project!" />
+        <meta name="description" content="This is my cool Next.js project!" />
       </Head>
 
       <h1 style={styles.title}>🌤️ Simple Weather App</h1>
