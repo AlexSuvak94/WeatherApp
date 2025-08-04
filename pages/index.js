@@ -43,7 +43,7 @@ export default function Home() {
     <div style={styles.container}>
 
       <Head>
-        <title>My Awesome Weather App</title>
+        <title>🌤️ Awesome Weather App</title>
         <meta name="description" content="This is a cool Next.js project!" />
       </Head>
 
