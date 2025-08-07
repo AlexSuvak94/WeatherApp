@@ -21,6 +21,8 @@ export default async function handler(req, res) {
             wind: data.wind
         });
     } catch (error) {
-        res.status(500).json({ message: 'Server error', error: error.toString() });
+        let myStr = error.toString();
+        myStr.charAt(0).toUpperCase() + myStr.slice(1);
+        res.status(500).json({ message: 'Server error', error: myStr });
     }
 }
