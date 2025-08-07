@@ -11,7 +11,9 @@ export default async function handler(req, res) {
         const data = await response.json();
 
         if (data.cod !== 200) {
-            return res.status(data.cod).json({ message: data.message });
+            let myStr = data.message.toString();
+            myStr = myStr.charAt(0).toUpperCase() + myStr.slice(1) + "...";
+            return res.status(data.cod).json({ message: myStr });
         }
 
         res.status(200).json({
@@ -21,8 +23,7 @@ export default async function handler(req, res) {
             wind: data.wind
         });
     } catch (error) {
-        let myStr = error.toString();
-        myStr.charAt(0).toUpperCase() + myStr.slice(1);
-        res.status(500).json({ message: 'Server error', error: myStr });
+
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 }
